@@ -1,7 +1,22 @@
-<nav>
-    <ul>
-      <li><a href="/private">Profile</a></li>
-      <li><a href="/auth/logout">Logout</a></li>
-    </ul>
-</nav>
-<h1>HOME PAGE</h1>
+<h1 class="title is-2">HOME PAGE</h1>
+<hr>
+<div class="columns is-centered">
+	<div class="column is-8">
+		<h2 class="title is-3">Recents Posts</h2>
+		<hr>
+		<div class="box">
+			<div class="movies-wrapper">
+				{{#each posts }}
+				<div class="movie-item">
+					<h4 class="title is-3" >{{this.title}}</h4>
+					<img src="{{this.picPath}}" alt="{{this.title}}">
+					<p>{{this.content}}</p>
+					<p>By: <strong>{{this.creator.username}}</strong></p>
+				</div>
+				{{else}}
+				<p class="help is-danger">There are no posts yet! :(</p>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

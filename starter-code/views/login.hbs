@@ -1,15 +1,40 @@
-<form action="/auth/login" method="POST">
-  <h2>Login</h2>
+<div class="columns is-centered">
+	<div class="column is-6">
+		<h2 class="title is-3">Login</h2>
+		<hr>
+		<div class="box">
+			<form action="/auth/login" method="POST">
+			<div class="field">
+				<label class="label">Name:</label>
+				<div class="control has-icons-left has-icons-right">
+					<input class="input" type="text" name="username">
+					<span class="icon is-small is-left">
+						<i class="fas fa-user"></i>
+					</span>
+				</div>
+				<p class="help is-danger">This email is invalid</p>
+			</div>
 
-  <label for="username">Username</label>
-  <input type="text" name="username">
+			<div class="field">
+				<label class="label">Password:</label>
+				<div class="control has-icons-left has-icons-right">
+					<input class="input" type="password" name="password">
+					<span class="icon is-small is-left">
+						<i class="fas fa-key"></i>
+					</span>
+				</div>
+			</div>
 
-  <label for="password">Password</label>
-  <input type="password" name="password">
-
-  <button>Sign in</button>
-
-  <p>
-    Don't have an account? <a href="/auth/signup">Sign up</a>
-  </p>
-</form>
+			<div class="buttons is-right">
+				<button type="submit" value="create" class="button is-fullwidth is-success is-hovered">
+					<span>Login</span>
+				</button>
+			</div>
+      <hr>
+      <div class="buttons">
+        Don't have an account? <a class="button is-text" href="/auth/signup">Sign up</a>
+      </div>
+		</form>
+		</div>
+	</div>
+</div>
